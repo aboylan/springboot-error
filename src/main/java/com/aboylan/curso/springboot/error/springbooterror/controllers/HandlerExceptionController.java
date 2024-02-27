@@ -42,7 +42,7 @@ public class HandlerExceptionController {
     }
 
     @ExceptionHandler(NoHandlerFoundException.class)
-    public ResponseEntity<Error> notFoundEx(NoHandlerFoundException e) {
+    public ResponseEntity<Error> notFoundEx(NoHandlerFoundException ex) {
         Error error = new Error();
         error.setDate(new Date());
         error.setError("Error division por cero!");
